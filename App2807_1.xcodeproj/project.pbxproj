@@ -53,6 +53,7 @@
 		32B1C9C91E08C0A200E25441 /* doctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 32B1C9C81E08C0A200E25441 /* doctor.png */; };
 		32B1C9D11E08C53F00E25441 /* signout_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 32B1C9D01E08C53F00E25441 /* signout_black.png */; };
 		32B53A431D4C8DDF00F770F2 /* LogoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B53A421D4C8DDF00F770F2 /* LogoutVC.m */; };
+		32D6FD421E141A86001072AB /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D6FD411E141A86001072AB /* Messages.framework */; };
 		32DD672D1DA05DB000DDE53A /* HomepageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DD672C1DA05DB000DDE53A /* HomepageVC.m */; };
 		32DD672F1DA05E8F00DDE53A /* doctl_logo_full_patient.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DD672E1DA05E8F00DDE53A /* doctl_logo_full_patient.png */; };
 		32EA5AE91DB6555B008C6852 /* VisitsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EA5AE81DB6555B008C6852 /* VisitsVC.m */; };
@@ -161,6 +162,7 @@
 		32B1C9D01E08C53F00E25441 /* signout_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = signout_black.png; path = "../../../Icons/iOS_icons_Olivo/All-icons/@1x/signout_black.png"; sourceTree = "<group>"; };
 		32B53A411D4C8DDF00F770F2 /* LogoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutVC.h; sourceTree = "<group>"; };
 		32B53A421D4C8DDF00F770F2 /* LogoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutVC.m; sourceTree = "<group>"; };
+		32D6FD411E141A86001072AB /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		32DD672B1DA05DB000DDE53A /* HomepageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomepageVC.h; sourceTree = "<group>"; };
 		32DD672C1DA05DB000DDE53A /* HomepageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomepageVC.m; sourceTree = "<group>"; };
 		32DD672E1DA05E8F00DDE53A /* doctl_logo_full_patient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doctl_logo_full_patient.png; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32D6FD421E141A86001072AB /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +254,7 @@
 				327A51BC1D4A329A0077F602 /* App2807_1Tests */,
 				327A51C71D4A329A0077F602 /* App2807_1UITests */,
 				327A519E1D4A32990077F602 /* Products */,
+				32D6FD401E141A85001072AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -343,6 +347,14 @@
 				327A51CA1D4A329A0077F602 /* Info.plist */,
 			);
 			path = App2807_1UITests;
+			sourceTree = "<group>";
+		};
+		32D6FD401E141A85001072AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32D6FD411E141A86001072AB /* Messages.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -660,7 +672,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8S4TG64VK5;
 				INFOPLIST_FILE = App2807_1/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DrApp.App2807-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -674,7 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8S4TG64VK5;
 				INFOPLIST_FILE = App2807_1/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DrApp.App2807-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
