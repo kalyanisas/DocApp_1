@@ -39,6 +39,8 @@
     [super viewDidLoad];
     self.usernameField.text = @"";
     self.passwordField.text = @"";
+//    [self performSelector:@selector(showMainMenu) withObject:nil afterDelay:1.0];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -79,12 +81,13 @@
     NSString *userNameText = self.usernameField.text;
     NSString *passwordText = self.passwordField.text;
     
-    if([self.serverToken isEqualToString:@"dummy"] || [self isValidToken]) {
+    
+//    if([self.serverToken isEqualToString:@"dummy"] || [self isValidToken]) {
  
         [[NSUserDefaults standardUserDefaults] setObject:userNameText forKey: @"user"];
         [[NSUserDefaults standardUserDefaults] setObject:passwordText forKey: @"pass"];
         [[NSUserDefaults standardUserDefaults] setObject:self.theTokenLocal[TOKEN] forKey: @"tokenId"];
-    }
+//    }
     
 }
 
@@ -113,7 +116,7 @@
         
     }
     if( [self isValidUser] && [self isValidPass]  ) {
-        [self callToken:self.theTokenLocal[USER] andPass:self.theTokenLocal[PASS]];
+        [self callToken:self.usernameField.text andPass:self.passwordField.text];
     }
 }
 
@@ -143,6 +146,8 @@
 }
 
 -(void) callToken : (NSString *) user andPass :(NSString *) pass {
+    
+    user = @"onco@onco.com";
     
     NSString *urlL = [ [NSString alloc ] initWithFormat:@"%@/?username=%@&password=%@&role=DOCTOR",
                       LOGIN,

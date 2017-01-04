@@ -82,14 +82,17 @@
     [super viewDidLoad];
     serverData *serverO= [serverData new];
     [self.theTokenLocal addObjectsFromArray: [serverO getToken]];
-    self.theTokenLocal[USER] =  @"d_onco@onco.com";
-
+//    self.theTokenLocal[USER] =  @"d_onco@onco.com";
+//    self.theTokenLocal[PASS] = @"123";
+    
     serverO.delegate = self;
     [serverO getServerData : @"GET" urlString: MY_PATIENTS userName:self.theTokenLocal[USER] password: self.theTokenLocal[PASS] params:nil ];
 }
 
 -(void)receiveServerData : (NSDictionary *) data{
     NSString  *error = [data valueForKey:@"error"];
+    
+
     if(error.length)
         [self alertMsgWithButtons:@"Error" AndMsg:[data valueForKey:@"error"]];
     else {
